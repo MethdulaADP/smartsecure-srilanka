@@ -4,9 +4,9 @@
     "builder": "NIXPACKS"
   },
   "deploy": {
-    "startCommand": "cd backend && python final_working_server.py",
+    "startCommand": "cd frontend && npm install && npm run build && cd ../backend && python final_working_server.py",
     "restartPolicyType": "ON_FAILURE",
-    "healthcheckPath": "/",
+    "healthcheckPath": "/api/health",
     "healthcheckTimeout": 100
   }
 }

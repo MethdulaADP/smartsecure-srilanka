@@ -1,5 +1,7 @@
 // Support both development and production environments
-const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:5004';
+// In production (Railway), backend and frontend are served from same URL
+const API_BASE = import.meta.env.VITE_API_URL || 
+                 (import.meta.env.MODE === 'production' ? '' : 'http://localhost:5004');
 
 export async function apiRegister(username, password, email){
   const res = await fetch(`${API_BASE}/register`, {

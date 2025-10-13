@@ -4,7 +4,7 @@ FINAL WORKING Backend Server for SmartSecure Sri Lanka
 This server has ALL endpoints working properly with comprehensive error handling
 """
 
-from flask import Flask, request, jsonify, send_file
+from flask import Flask, request, jsonify, send_file, send_from_directory
 from flask_cors import CORS
 import sqlite3
 import bcrypt
@@ -16,15 +16,19 @@ import uuid
 import hashlib
 
 # Configuration
-SECRET_KEY = "smartsecure_final_secret_2024"
+SECRET_KEY = os.environ.get('JWT_SECRET_KEY', "smartsecure_final_secret_2024")
 # Use absolute path to ensure we're using the correct database
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 DB_PATH = os.path.join(SCRIPT_DIR, 'smartsecure.db')
 
-app = Flask(__name__)
+# Frontend static files path (for production deployment)
+FRONTEND_DIST = os.path.join(os.path.dirname(SCRIPT_DIR), 'frontend', 'dist')
+
+app = Flask(__name__, static_folder=FRONTEND_DIST, static_url_path='')
 CORS(app, origins=[
     'http://localhost:5188', 'http://127.0.0.1:5188', 
-    'http://localhost:5173', 'http://127.0.0.1:5173'
+    'http://localhost:5173', 'http://127.0.0.1:5173',
+    '*'  # Allow all origins in production (configure this based on your domain)
 ])
 
 def verify_token(token):
@@ -40,7 +44,7 @@ def verify_token(token):
 
 # ==================== BASIC ENDPOINTS ====================
 
-@app.route('/', methods=['GET'])
+@app.route('/api/health', methods=['GET'])
 def health_check():
     return jsonify({
         'status': 'running',
@@ -999,6 +1003,28 @@ def get_stats():
             'systemHealth': 'Good', 'uptime': '99.9%',
             'lastActivity': datetime.now().isoformat()
         })
+
+# ==================== FRONTEND SERVING (Production) ====================
+
+@app.route('/', defaults={'path': ''})
+@app.route('/<path:path>')
+def serve_frontend(path):
+    """Serve the React frontend in production"""
+    # If requesting a specific file that exists, serve it
+    if path and os.path.exists(os.path.join(FRONTEND_DIST, path)):
+        return send_from_directory(FRONTEND_DIST, path)
+    # For API routes, return 404
+    if path.startswith('api/'):
+        return jsonify({'error': 'Not found'}), 404
+    # Otherwise serve index.html (for React Router)
+    index_path = os.path.join(FRONTEND_DIST, 'index.html')
+    if os.path.exists(index_path):
+        return send_from_directory(FRONTEND_DIST, 'index.html')
+    # Fallback if frontend not built
+    return jsonify({
+        'message': 'SmartSecure API is running. Build frontend with "npm run build" to serve UI.',
+        'status': 'API_ONLY'
+    })
 
 if __name__ == '__main__':
     print("🚀 === SmartSecure Sri Lanka - FINAL WORKING Backend ===")
