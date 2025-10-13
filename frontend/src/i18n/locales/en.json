@@ -1,0 +1,242 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services", 
+    "about": "About",
+    "contact": "Contact",
+    "login": "Login",
+    "register": "Register",
+    "dashboard": "Dashboard",
+    "logout": "Logout"
+  },
+  "home": {
+    "hero": {
+      "badge": "Proudly Sri Lankan",
+      "title": "Protect What",
+      "titleHighlight": "Matters Most",
+      "subtitle": "Advanced Security Solutions for Modern Sri Lanka",
+      "getStarted": "🚀 Get Started",
+      "learnMore": "📚 Learn More"
+    },
+    "services": {
+      "title": "Our Security Services",
+      "subtitle": "Comprehensive protection solutions tailored for Sri Lankan homes and businesses",
+      "homeSecurity": {
+        "title": "Home Security",
+        "desc": "Smart monitoring systems for complete residential protection with 24/7 surveillance"
+      },
+      "businessProtection": {
+        "title": "Business Protection", 
+        "desc": "Commercial security solutions designed for Sri Lankan enterprises and offices"
+      },
+      "mobileAlerts": {
+        "title": "Mobile Alerts",
+        "desc": "Real-time notifications and alerts sent directly to your mobile device"
+      },
+      "accessControl": {
+        "title": "Access Control",
+        "desc": "Digital key management and secure access control systems"
+      },
+      "cctvSystems": {
+        "title": "CCTV Systems", 
+        "desc": "24/7 surveillance systems with HD recording and remote monitoring"
+      },
+      "emergencyResponse": {
+        "title": "Emergency Response",
+        "desc": "Instant alert systems with direct connection to emergency services"
+      }
+    },
+    "features": {
+      "title": "Why Choose SmartSecure?",
+      "subtitle": "Trusted by thousands of Sri Lankan families and businesses",
+      "monitoring": {
+        "title": "24/7 Monitoring",
+        "desc": "Round-the-clock protection with our advanced monitoring systems and rapid response team"
+      },
+      "localSupport": {
+        "title": "Local Sri Lankan Support",
+        "desc": "Dedicated local support team with deep understanding of Sri Lankan security needs"
+      },
+      "advancedProtection": {
+        "title": "Advanced Protection",
+        "desc": "State-of-the-art security technology with AI-powered threat detection and prevention"
+      }
+    },
+    "cta": {
+      "title": "Ready to Secure Your Future?",
+      "subtitle": "Join thousands of satisfied customers who trust SmartSecure Sri Lanka",
+      "getStarted": "🚀 Get Started Today",
+      "contactUs": "📞 Contact Us"
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Welcome Back",
+      "subtitle": "Sign in to SmartSecure",
+      "username": "👤 Username",
+      "password": "🔒 Password",
+      "signIn": "🚀 Sign In",
+      "signingIn": "Signing in...",
+      "noAccount": "Don't have an account?",
+      "createAccount": "Create Account →",
+      "devMode": "🚧 Development Mode - Any username/password works"
+    },
+    "register": {
+      "title": "Create Account",
+      "subtitle": "Join SmartSecure Sri Lanka",
+      "username": "👤 Username",
+      "email": "📧 Email",
+      "password": "🔒 Password",
+      "confirmPassword": "🔐 Confirm Password",
+      "createAccount": "✨ Create Account",
+      "creatingAccount": "Creating Account...",
+      "haveAccount": "Already have an account?",
+      "signIn": "Sign In →",
+      "devMode": "🚧 Development Mode - Registration stores a mock user locally"
+    }
+  },
+  "dashboard": {
+    "welcome": "Welcome to Your Security Dashboard",
+    "subtitle": "Manage your files, monitor security, and get AI-powered insights all in one place",
+    "quickStats": {
+      "filesUploaded": "Files Uploaded",
+      "storageUsed": "Storage Used", 
+      "status": "Status",
+      "active": "Active",
+      "idle": "Idle"
+    },
+    "tabs": {
+      "overview": "📊 Overview",
+      "files": "📁 My Files",
+      "security": "🔒 Security",
+      "ai": "🤖 AI Insights"
+    },
+    "overview": {
+      "title": "Dashboard Overview",
+      "quickActions": "Quick Actions",
+      "uploadFiles": {
+        "title": "Upload Files",
+        "desc": "Add new files to your secure storage"
+      },
+      "securityScan": {
+        "title": "Security Scan",
+        "desc": "Run AI security analysis"
+      },
+      "viewInsights": {
+        "title": "View Insights",
+        "desc": "AI-powered recommendations"
+      },
+      "recentActivity": "Recent Activity",
+      "activityFeedComing": "Activity feed coming soon"
+    },
+    "files": {
+      "title": "My Files",
+      "uploadFiles": "Upload Files",
+      "uploading": "Uploading...",
+      "noFiles": "No files yet",
+      "noFilesDesc": "Use the upload button to add your first file.",
+      "name": "Name",
+      "size": "Size (KB)", 
+      "uploaded": "Uploaded"
+    },
+    "security": {
+      "title": "Security Center",
+      "accountSecure": "Account Secure",
+      "secureDesc": "Your account is protected and secure.",
+      "aiProtection": "AI Protection",
+      "aiDesc": "AI monitoring will protect your files.",
+      "comingSoon": "🚧 Advanced security features coming in Phase 2"
+    },
+    "ai": {
+      "title": "AI Insights",
+      "loading": "Loading analytics...",
+      "totalFiles": "Total Files",
+      "storageUsed": "Storage Used",
+      "fileCategories": "File Categories",
+      "fileTypeBreakdown": "File Type Breakdown",
+      "noFiles": "No files yet"
+    }
+  },
+  "about": {
+    "title": "About SmartSecure",
+    "description": "SmartSecure Sri Lanka is focused on democratizing access to modern security technology for local households and small-to-medium businesses. We believe safety should be intelligent, proactive, and culturally localized. Our platform evolves in structured phases—building a solid core before layering advanced AI-driven analytics.",
+    "mission": "Mission",
+    "missionDesc": "Deliver affordable, trustworthy, and scalable security services built for Sri Lanka.",
+    "vision": "Vision",
+    "visionDesc": "Create the region's most adaptive security intelligence platform.",
+    "values": "Values",
+    "valuesDesc": "Integrity, resilience, user-centric design, and continuous innovation.",
+    "milestonesTitle": "Milestones",
+    "milestones": {
+      "2024": "Conceptualization and market research across Sri Lankan SMBs.",
+      "2025q1": "Founding team assembled; initial React + Node platform scaffolded.",
+      "2025q2": "MVP launch with authentication and dashboard prototype.",
+      "2025q3": "AI threat modelling research + design of Phase 3 features."
+    },
+    "whatsNext": "What's Next?",
+    "whatsNextDesc": "Upcoming phases introduce secure file storage, audit trails, anomaly detection, and AI-driven alert prioritization.",
+    "thanksMessage": "You're early—thanks for believing in the journey."
+  },
+  "contact": {
+    "title": "Contact Us",
+    "description": "We'd love to hear from you. Whether you need a tailored security assessment or have feedback about the platform, reach out—we respond within 24 hours.",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "you@example.com",
+      "message": "Message",
+      "messagePlaceholder": "How can we help?",
+      "send": "Send Message",
+      "sending": "Sending...",
+      "sent": "✅ Sent!",
+      "thankYou": "We received your message. Thank you!"
+    },
+    "info": {
+      "headOffice": "Head Office",
+      "address": "Colombo 03\\nWestern Province, Sri Lanka\\nOpen 9 AM – 6 PM (Weekdays)",
+      "contact": "Contact",
+      "support": "Support",
+      "supportDesc": "We're currently onboarding early adopters. Priority SLA-based support will launch in Phase 2.",
+      "urgent": "Need urgent help?",
+      "urgentDesc": "For critical issues, include URGENT in the subject line.",
+      "responseTime": "Average response time (current beta): under 6 hours."
+    }
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Security solutions tailored for Sri Lankan households, SMEs, and growing enterprises.",
+    "homeSecurity": "Smart sensors, intrusion detection, and remote monitoring for residences.",
+    "businessProtection": "Enterprise-grade surveillance and access management for offices.",
+    "cctvMonitoring": "High-definition recording with cloud retention and analytics.",
+    "accessControl": "Keyless entry, role-based access, and audit trail visibility.",
+    "mobileAlerts": "Real-time push notifications for critical security events.",
+    "aiThreatDetection": "Pattern analysis and anomaly detection (Phase 3).",
+    "customPackage": "Need a Custom Security Package?",
+    "customDesc": "We can design a tailored solution combining physical systems, cloud monitoring, and AI-driven analytics.",
+    "talkToUs": "📞 Talk to Us"
+  },
+  "footer": {
+    "tagline": "Securing Sri Lanka, One Home at a Time.",
+    "services": "Services",
+    "homeSecurity": "Home Security",
+    "businessProtection": "Business Protection", 
+    "cctvSystems": "CCTV Systems",
+    "accessControl": "Access Control",
+    "contact": "Contact",
+    "follow": "Follow",
+    "copyright": "© {{year}} SmartSecure Sri Lanka. All rights reserved."
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "save": "Save",
+    "edit": "Edit",
+    "delete": "Delete",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous"
+  }
+}

@@ -1,0 +1,9 @@
+This is a test file for SmartSecure Sri Lanka file upload functionality.
+Created on October 1, 2025.
+
+Test content:
+- File upload test
+- Security scanning test
+- System integration test
+
+Status: Ready for upload!
