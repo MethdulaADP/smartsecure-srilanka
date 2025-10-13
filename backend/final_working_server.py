@@ -25,11 +25,25 @@ DB_PATH = os.path.join(SCRIPT_DIR, 'smartsecure.db')
 FRONTEND_DIST = os.path.join(os.path.dirname(SCRIPT_DIR), 'frontend', 'dist')
 
 app = Flask(__name__, static_folder=FRONTEND_DIST, static_url_path='')
-CORS(app, origins=[
-    'http://localhost:5188', 'http://127.0.0.1:5188', 
-    'http://localhost:5173', 'http://127.0.0.1:5173',
-    '*'  # Allow all origins in production (configure this based on your domain)
-])
+
+# CORS configuration for free hosting platforms
+allowed_origins = [
+    'http://localhost:5188', 
+    'http://127.0.0.1:5188', 
+    'http://localhost:5173', 
+    'http://127.0.0.1:5173',
+    'https://smartsecure-srilanka.web.app',  # Firebase
+    'https://smartsecure-srilanka.firebaseapp.com',  # Firebase
+    'https://smartsecure-srilanka.vercel.app',  # Vercel
+    'https://smartsecure-srilanka.netlify.app',  # Netlify
+]
+
+# In production, allow all origins if FLASK_ENV is production
+# This is safe because JWT tokens protect the API
+if os.environ.get('FLASK_ENV') == 'production':
+    CORS(app, resources={r"/*": {"origins": "*"}})
+else:
+    CORS(app, origins=allowed_origins)
 
 def verify_token(token):
     """Verify JWT token"""
