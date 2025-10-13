@@ -1053,7 +1053,9 @@ if __name__ == '__main__':
     print("=" * 70)
     
     try:
-        app.run(host='0.0.0.0', port=5004, debug=False, threaded=True)
+        # Get port from environment variable (for Railway/Render) or default to 5004
+        port = int(os.environ.get('PORT', 5004))
+        app.run(host='0.0.0.0', port=port, debug=False, threaded=True)
     except Exception as e:
         print(f"❌ Server error: {e}")
         import traceback

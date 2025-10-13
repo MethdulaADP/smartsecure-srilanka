@@ -1,4 +1,5 @@
-const API_BASE = 'http://localhost:5000';
+// Support both development and production environments
+const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:5004';
 
 export async function apiRegister(username, password, email){
   const res = await fetch(`${API_BASE}/register`, {
